@@ -166,5 +166,175 @@ Se encarga de escoger el filtro que se quiere usar.
 - Madgwick.cs
 - Mahoney.cs
 - None.cs
-
-
+# Graphs
+### Descripción general y propósito
+Se encarga de todo lo relacionado con los graficos
+### Dependencias
+- ibcdatacsharp.UI.ToolBar
+- ibcdatacsharp.UI.ToolBar.Enums
+- ibcdatacsharp.UI.Common
+- ibcdatacsharp.DeviceList.TreeClasses
+- ibcdatacsharp.UI.Filters
+### Implementacion
+- GraphData.cs
+- GraphInterface.cs
+- GraphManager.cs
+## Graphs.Models
+### Descripción general y propósito
+Modelos de Scottplot de los graficos
+### Dependencias
+- ScottPlot;
+- ScottPlot.Plottable;
+### Implementacion
+- Model1S.cs
+- Model3S.cs
+- Model4S.cs
+- ModelSagital.cs
+## Graphs.OneIMU
+### Descripción general y propósito
+Vistas de los graficos para 1 IMU
+### Dependencias
+- ibcdatacsharp.UI.Device
+- ibcdatacsharp.UI.Graphs.Models
+### Implementacion
+- GraphAccelerometer.xaml
+- GraphAccelerometer.xaml.cs
+- GraphGyroscope.xaml
+- GraphGyroscope.xaml.cs
+- GraphLinAcc.xaml
+- GraphLinAcc.xaml.cs
+- GraphMagnetometer.xaml
+- GraphMagnetometer.xaml.cs
+- GraphQuaternion.xaml
+- GraphQuaternion.xaml.cs
+## Graphs.Sagital
+### Descripción general y propósito
+Vistas de los graficos para 4 IMUs (Angulos sagitales)
+### Dependencias
+- ibcdatacsharp.UI.Graphs.Models;
+### Implementacion
+- GraphAnkle.xaml
+- GraphAnkle.xaml.cs
+- GraphHip.xaml
+- GraphHip.xaml.cs
+- GraphKnee.xaml
+- GraphKnee.xaml.cs
+## Graphs.TwoIMU
+### Descripción general y propósito
+Vistas de los graficos para 2 IMUs
+### Dependencias
+- ibcdatacsharp.UI.Device;
+- ibcdatacsharp.UI.Graphs.Models;
+### Implementacion
+- AngleGraphX.xaml
+- AngleGraphX.xaml.cs
+- AngleGraphY.xaml
+- AngleGraphY.xaml.cs
+- AngleGraphZ.xaml
+- AngleGraphZ.xaml.cs
+- GraphAngularAcceleration.xaml
+- GraphAngularAcceleration.xaml.cs
+- GraphAngularVelocity.xaml
+- GraphAngularVelocity.xaml.cs
+# MenuBar
+### Descripción general y propósito
+Se encarga de la barra de menús de arriba
+### Dependencias
+- ibcdatacsharp.UI.ToolBar
+- ibcdatacsharp.UI.ToolBar.Enums
+### Implementacion
+- MenuBar.xaml
+- MenuBar.xaml.cs
+- Version.xaml
+- Version.xaml.cs
+## MenuBar.View
+### Descripción general y propósito
+Clases para manejar la recuperacion de vistas al cerrarlas
+### Dependencias
+- ibcdatacsharp.Common
+- AvalonDock.Layout
+### Implementacion
+- ViewInfo.cs
+- WindowInfo.cs
+- WindowInfoTitle.cs
+# Pacientes
+### Descripción general y propósito
+Vista de centros y usuarios de la base de datos
+### Dependencias
+- ibcdatacsharp.Login
+- ibcdatacsharp.UI.Pacientes.Models
+- sign_in_dotnet_wpf
+- MySql.Data.MySqlClient
+- Microsoft.Win32
+- Newtonsoft.Json
+- Syncfusion.UI.Xaml.TreeView.Engine
+### Implementacion
+- AuxiliarDataTemplateSelector.cs
+- MedicoDataTemplateSelector.cs
+- MessageRecorded.xaml
+- MessageRecorded.xaml.cs
+- Pacientes.xaml
+- Pacientes.xaml.cs
+- RemoteTransactions.cs
+## Pacientes.Models
+### Descripción general y propósito
+Modelos para el MVVM de la vista Pacientes
+### Dependencias
+No tiene
+### Implementacion
+- Auxiliar.cs
+- Centro.cs
+- CentroRoot.cs
+- Medico.cs
+- Paciente.cs
+- Test.cs
+# SagitalAngles
+### Descripción general y propósito
+Calculos de los angulos sagitales (4 IMUs)
+### Dependencias
+- ibcdatacsharp.DeviceList.TreeClasses
+- ibcdatacsharp.UI.Common
+- ibcdatacsharp.UI.Graphs.Models
+- ibcdatacsharp.UI.Graphs.Sagital
+- ibcdatacsharp.UI.ToolBar
+- ibcdatacsharp.UI.ToolBar.Enums
+### Implementacion
+- SagitalAngles.cs
+- Utils.cs
+# Subjects
+### Descripción general y propósito
+No se usa (es como el modulo Pacientes pero no esta completo)
+# TimeLine
+### Descripción general y propósito
+Vista de la linea de tiempo (de abajo)
+### Dependencias
+- ibcdatacsharp.UI.ToolBar
+- ScottPlot
+- ScottPlot.Plottable
+### Implementacion
+- Model.cs
+- TimeLine.xaml
+- TimeLine.xaml.cs
+# Timer
+### Descripción general y propósito
+Timer sacado de un code project no se usa
+# ToolBar
+### Descripción general y propósito
+Se encarga del manejo de la barra de herramientas. (arriba debajo del menu)
+### Dependencias
+- ibcdatacsharp.UI.Common
+- ibcdatacsharp.UI.Filters
+- ibcdatacsharp.UI.SagitalAngles
+- ibcdatacsharp.DeviceList.TreeClasses
+- ibcdatacsharp.UI.FileSaver
+- ibcdatacsharp.Login
+- ibcdatacsharp.UI.Graphs
+- Microsoft.WindowsAPICodePack.Shell
+- Microsoft.WindowsAPICodePack.Shell.PropertySystem
+### Implementacion
+- ToolBar.xaml
+- ToolBar.xaml.cs
+- VirtualToolBar.cs
+- VirtualToolBarProperties.cs
+- Enums/PauseState.cs
+- Enums/RecordState.cs
